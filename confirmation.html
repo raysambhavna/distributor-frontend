@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>✅ Order Placed Successfully</h2>
+
+<p id="details"></p>
+
+<a href="dashboard.html">
+    <button>Go to Dashboard</button>
+</a>
+
+<script>
+    // URL se data nikalna
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+    const quantity = params.get("quantity");
+
+    document.getElementById("details").innerText =
+        "Product: " + product + " | Quantity: " + quantity;
+</script>
+
+</body>
+</html>
